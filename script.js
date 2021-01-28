@@ -96,6 +96,25 @@ function totalUpdate(id, price) {
 
 };
 
+const checkOut = document.querySelector('.check_out');
+checkOut.addEventListener('click',function () {
+        alert('Thank You being with us.');
+
+        // if (condition) {
+                
+        // } else {
+                
+        // }
+        return (document.getElementById('phone_count').value = '0',
+        document.getElementById('case_count').value = '0',
+        document.getElementById('phone_price').innerText = '00.00',
+        document.getElementById('case_price').innerText = '00.00',
+        document.getElementById('sub_total').innerText = '00.00',
+        document.getElementById('tax').innerText = '00.00',
+        document.getElementById('grand_total').innerText = '00.00'
+        )
+})
+
 
 
 

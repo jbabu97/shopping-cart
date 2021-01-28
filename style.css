@@ -46,7 +46,7 @@ body{
 .status{
 	text-align: right;
 }
-.check-out{
+.check_out{
     float: right;
     padding: 10px 30px;
 	font-size: 19px;

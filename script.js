@@ -79,15 +79,22 @@ function totalUpdate(id, price) {
         const subTotalNum = parseFloat(subTotal);
         console.log(subTotal);
         const total = subTotalNum + price;
-        document.getElementById(id).innerText = total;
+        finalSubTotal = document.getElementById(id).innerText = total;
         console.log(total);
+
+        let tax = document.getElementById('tax').innerText;
+        let taxNumber = parseFloat(tax);
+        let taxOfSubTotal = parseFloat((finalSubTotal * .05).toFixed(2));
+        let finalSubTotalOfTax = document.getElementById('tax').innerText = taxOfSubTotal;
+        console.log(taxOfSubTotal);
 
         const grandTotal = document.getElementById('grand_total').innerText;
         const grandTotalNum = parseFloat(grandTotal);
 
-        const grandGrandTotal = grandTotalNum + price;
+        const grandGrandTotal = parseFloat((grandTotalNum + price + finalSubTotalOfTax).toFixed(2));
         document.getElementById('grand_total').innerText = grandGrandTotal;
-}
+
+};
 
 
 

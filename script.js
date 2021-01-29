@@ -1,9 +1,9 @@
 // for phone
 const phonePlusBtn = document.getElementById('plus_btn_1');
-
 phonePlusBtn.addEventListener('click', function () {
         let incrementCount = document.getElementById('phone_count').value;
-        let incrementNumber = parseFloat(incrementCount);
+        console.log(incrementCount);
+        let incrementNumber = parseInt(incrementCount);
         let increment = document.getElementById('phone_count').value = incrementNumber + 1;
 
         let phonePrice = 1219;
@@ -18,7 +18,7 @@ phonePlusBtn.addEventListener('click', function () {
 const phoneMinusBtn = document.getElementById('minus_btn_1');
 phoneMinusBtn.addEventListener('click', function () {
         let decrementCount = document.getElementById('phone_count').value;
-        let decrementNumber = parseFloat(decrementCount);
+        let decrementNumber = parseInt(decrementCount);
         let decrement = document.getElementById('phone_count').value = decrementNumber - 1;
 
         let phonePrice = 1219;
@@ -26,7 +26,6 @@ phoneMinusBtn.addEventListener('click', function () {
                 return document.getElementById('phone_count').value = '0';
         }
         else {  
-                
                 let totalPhonePrice = decrement * phonePrice;
                 document.getElementById('phone_price').innerText = totalPhonePrice;
                 console.log(totalPhonePrice);
@@ -37,12 +36,10 @@ phoneMinusBtn.addEventListener('click', function () {
 
 
 // for case
-
 const casePlusBtn = document.getElementById('plus_btn_2');
-
 casePlusBtn.addEventListener('click', function () {
         let incrementCount = document.getElementById('case_count').value;
-        let incrementNumber = parseFloat(incrementCount);
+        let incrementNumber = parseInt(incrementCount);
         let increment = document.getElementById('case_count').value = incrementNumber + 1;
         
         let casePrice = 59;
@@ -100,11 +97,6 @@ const checkOut = document.querySelector('.check_out');
 checkOut.addEventListener('click',function () {
         alert('Thank You being with us.');
 
-        // if (condition) {
-                
-        // } else {
-                
-        // }
         return (document.getElementById('phone_count').value = '0',
         document.getElementById('case_count').value = '0',
         document.getElementById('phone_price').innerText = '00.00',
@@ -113,7 +105,29 @@ checkOut.addEventListener('click',function () {
         document.getElementById('tax').innerText = '00.00',
         document.getElementById('grand_total').innerText = '00.00'
         )
-})
+});
+
+let removeBtnPhone = document.getElementById('remove_item_1');
+removeBtnPhone.addEventListener('click', function () {
+
+        removeCart('cart_item_1')
+
+        
+});
+
+let removeBtnCase = document.getElementById('remove_item_2');
+removeBtnCase.addEventListener('click', function () {
+        
+        removeCart('cart_item_2')
+
+});
+
+function removeCart(id) {
+        let removeParent = document.getElementById(id);
+        removeParent.remove();
+
+}
+
 
 
 

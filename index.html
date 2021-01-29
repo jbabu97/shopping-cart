@@ -26,7 +26,7 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="phone_decrement" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button onclick="handlePhoneCount(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="phone_count" type="text" class="form-control text-center phone_count" value="1">
                            <button id="phone_increment" class="btn btn-default phone_increment"><i class="fas fa-plus"></i></button>
                         </div>
@@ -45,9 +45,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="minus_btn_2" class="btn btn-default minus_btn"><i class="fas fa-minus"></i></button>
+                           <button id="case_decrease" class="btn btn-default minus_btn"><i class="fas fa-minus"></i></button>
                            <input id="case_count" type="text" class="form-control text-center phone_count" value="1">
-                           <button id="plus_btn_2" class="btn btn-default plus_btn"><i class="fas fa-plus"></i></button>
+                           <button id="case_increase" class="btn btn-default plus_btn"><i class="fas fa-plus"></i></button>
 
                         </div>
                         <h5>$ <span id="case_price">59</span></h5>
